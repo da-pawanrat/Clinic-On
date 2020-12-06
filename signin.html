@@ -9,17 +9,32 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color:#BDDAE6;">
+
       <div class="container">
-        <div class="display-2">Home</div>
-        <div class="">Welcome, <span id="username"></span></div>
+        <img src="images/clinic_on_logo.jpg"  style="width:100%; height: 100%; border-radius: 100%;">
+        <br>
+        <br>
+        <div class="display-2" style="color:black;text-align-last: center;">
+          <h1>Sign in</h1>
+        </div>
+        <div class="form-group">
+          <label for="">Username</label>
+          <input type="email" class="form-control" name="" id="email" aria-describedby="emailHelpId" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="">Password</label>
+          <input type="password" class="form-control" name="" id="password" placeholder="">
+        </div>
+
+        <button type="button" class="btn btn-primary" id="signinemail">Sign In</button>
+        <button type="button" class="btn btn-danger" id="signingoogle">Sign In With Google</button>
         <p>
-          <div id="displayname"></div>
+          <div class="alert alert-danger">
+            <span id="error"></span>
+          </div>
         </p>
-        <p>
-          <div><img id="photo" src="" alt="" srcset=""></div>
-        </p>
-        <button type="button" id="signout" class="btn btn-primary">Sign Out</button>
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -30,6 +45,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
     <script src="firebase.js"></script>
-    <script src="index.js"></script>
+    <script src="signin.js"></script>
   </body>
 </html>
