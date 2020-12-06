@@ -9,8 +9,8 @@ $(function () {
       console.log(displayName,email,photoUrl);
 
       $("#username").text(email);
-      $("#displayName").text(displayName);
-      $("#photo").attr("src",photoURL);
+      $("#displayname").text(displayName);
+      $("#photo").attr("src",photoUrl);
 
     } else {
       window.location.href = 'signin.html'
