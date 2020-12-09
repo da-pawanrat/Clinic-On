@@ -1,14 +1,29 @@
 <ons-page id="profile">
 
-  <div class="container">
-    <div class="display-2">Profile</div>
-    <div class="">Welcome, <span id="username"></span></div>
+  <center><div class="container">
+    <!-- <div class="display-4">Profile</div>    -->
+    <br>
+    <div class="alert alert-warning" role="alert"">Welcome, <span id="username"></span></div>
     <p>
+      <div><img id="photo" src="" alt="" srcset="" style="width:40%; height: 40%; border-radius: 60%;"></div>
+    </p>
+    <h2>
       <div id="displayname"></div>
-    </p>
-    <p>
-      <div><img id="photo" src="" alt="" srcset=""></div>
-    </p>
+    </h2>
+    <br>
+
+    <ons-list-header>List</ons-list-header>
+    <ons-list-item modifier="longdivider">ประวัติการรักษา</ons-list-item>
+    <ons-list-item modifier="longdivider">คุณหมอคนโปรด</ons-list-item>
+  </ons-list>
+
+    <div style="font-size: 70%; font-weight: 500; margin-top: 3%; width: 100%; text-align: center;">
+      <button
+      style="background-color:rgb(5, 204, 121); color:rgb(255, 255, 255); font-weight: 500; border: none; border-radius: 25px; margin-top: 5%;"
+      type="button" class="btn btn-primary" id="next">PAYMENT</button>
+    <br><br>
+
     <button type="button" id="signout" class="btn btn-primary" onclick="signout()">Sign Out</button>
   </div>
+</center>
 </ons-page>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Clinic-On</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body style="background-color: #E5E5E5;">
+
+  <div  style="background-color:#A9C8EB;text-align: center;">    
+            <h4 >Favorite</h4> 
+  </div>
+
+
+  <div class="container">
+
+    <div class="row" >
+
+      <div class="col-6" style="background-color: #CBDAEB;border-radius: 50px;">
+        <div style="text-align: center;margin-top: 10px;">
+            <img src="data:image/png;base64,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" height="60px" width="60px" alt="">
+        </div>
+        <div  style="margin-top: 10px;text-align: center;">
+            <h8 >MD.TOM</h8>
+            <p>Clinic A</p> 
+        </div>
+        
+        
+      </div>
+      <div class="col-6" style="background-color: #CBDAEB;border-radius: 50px;">
+        <div style="text-align: center;margin-top: 10px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzRjyKohqdl078QJ23jHyL4iocNdch0Ufg2w&usqp=CAU" height="60px" width="60px" alt="">
+        </div>
+        <div style="margin-top: 10px;text-align: center;">
+            <h8 >MD.EIEI</h8>
+            <p>Clinic B</p> 
+        </div>
+        
+        
+      </div>
+    </div>
+    <div class="row" style="margin-top: 15px;" >
+      <div class="col-6" style="background-color: #CBDAEB;border-radius: 50px;">
+        <div style="text-align: center;margin-top: 10px;">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/1912/1912304.svg" height="60px" width="60px" alt="">
+        </div>
+        <div style="margin-top: 10px;text-align: center;">
+            <h8 >MD.EUEU</h8>
+            <p>Clinic C</p> 
+        </div>
+        
+        
+      </div>
+      <div class="col-6" style="background-color: #CBDAEB;border-radius: 50px;">
+        <div style="text-align: center;margin-top: 10px;">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/2947/2947668.svg" height="60px" width="60px" alt="">
+        </div>
+        <div style="margin-top: 10px;text-align: center;">
+            <h8 >MD.ADAM</h8>
+            <p>Clinic D</p> 
+        </div>
+        
+        
+      </div>
+      
+
+    </div>
+  </div>
+
+</body>
+
+</html>
