@@ -1,4 +1,6 @@
 $(function () {
+
+  
 console.log("dasdasdas");
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -27,4 +29,24 @@ function signout() {
           // An error happened.
         });
     
+}
+
+function payment() {
+  window.location.href = 'payment.html'
+}
+
+function hisHeal() {
+  window.location.href = 'docdetail.html'
+}
+
+function map() {
+  window.location.href = 'map.html'
+}
+
+function fav() {
+  window.location.href = 'favorite.html'
+}
+
+function addPayment() {
+  window.location.href = 'addpayment.html'
 }

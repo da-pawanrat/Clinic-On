@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Payment Success</title>
+    <title>Clinic</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,13 +13,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <style>
         .row {
             margin-left: 5%;
             margin-top: 1%;
         }
-
-        
+        #mapid { 
+            width: 100%;
+            height: 350px; }
+        .clinic{
+            text-align: center;
+            border-radius: 25px;
+        }
+        .eachClinic{
+            width: 90%; height: 80px; background-color:#A9C8EB ; border-radius: 30px; margin: auto; margin-top: 5%; font-size: ;
+        }
     </style>
 
 <body style="background-color:#ffffff;">
@@ -27,7 +41,7 @@
 
     <div class="row">
         <button style="background-color:white; color:black; border: none; font-weight: 600; border-radius: 100%; margin-top: 3%;"
-            type="button" class="btn btn-primary" id="next"> <i class="fas fa-chevron-left"></i> </button>
+            type="button" class="btn btn-primary" id="next" onclick="back()"> <i class="fas fa-chevron-left"></i> </button>
 
         <div class="display-2" style="color:black;text-align-last: center; width: 73%; padding-top: 2%;">
             <div style="width:13%;"></div>
@@ -37,43 +51,40 @@
     </div>
 
     <div style="margin-top: 3%;">
-        <header style="text-align: center;">
-            <p style="font-size: 180%; background-color:#A9C8EB">Payment</p>
-        </header>
+        <div style="text-align: center;">
+            <div style="font-size: 180%; background-color:#A9C8EB">Clinic</div>
+        </div>
     </div>
 
-    <div style="font-size: 70%; font-weight: 300; width: 90%; text-align: right;">
-         วันที่: 27/11/2020
+    <div id="mapid"></div>
+    
+    <div class="clinic">
+        <!-- <div class="eachClinic">
+            <div class="row" style="">
+                <div style="width: 30%;" style="text-align:center; ">
+                    
+                    <i class="fas fa-clinic-medical" style="font-size:200%; margin-top: 20%; color: white;"></i>
+                </div>
+
+                <div class="col"    style="width: 70%; margin-top: 3%; font-size:120%; text-align: left;">
+                    
+                    <div class="nameC"> asdasd</div>
+                    <div class="nameD">asdasdasd </div>
+                </div>
+            </div>
+        </div> -->
     </div>
+    
 
-    <div style="font-size: 700%; font-weight: 300; margin-top: 3%; width: 100%; text-align: center;"><i class="fas fa-check-circle" style="color: rgb(5, 204, 121);"></i>
-    </div>
-
-    <div style="font-size: 200%; font-weight: 500; margin-top: 1%; width: 100%; text-align: center;">ชำระเงินสำเร็จ
-    </div>
-
-    <div style="font-size: 70%; font-weight: 500; margin-top: 3%; width: 100%; text-align: center;">จำนวนเงืน 555.00 bath
-    </div>
-
-    <div style="font-size: 70%; font-weight: 500; margin-top: 3%; width: 100%; text-align: center;">
-        <button
-        style="background-color:rgb(5, 204, 121); color:rgb(255, 255, 255); font-weight: 500; border: none; border-radius: 25px; margin-top: 5%;"
-        type="button" class="btn btn-primary" id="next" onclick="success()">BACK</button>
-    </div>
+    
 
 
 
 
 
-
-    <script>
-
-        function success() {
-            window.location.href = 'index.html'
-        }
-    </script>
 
     <!-- Optional JavaScript -->
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -87,8 +98,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script src="map.js"></script>
+            
     <!-- <script src="firebase.js"></script>
     <script src="signin.js"></script> -->
+
+    
 </body>
 
 </html>

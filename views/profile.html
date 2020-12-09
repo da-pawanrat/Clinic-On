@@ -13,14 +13,15 @@
     <br>
 
     <ons-list-header>List</ons-list-header>
-    <ons-list-item modifier="longdivider">ประวัติการรักษา</ons-list-item>
-    <ons-list-item modifier="longdivider">คุณหมอคนโปรด</ons-list-item>
+    <ons-list-item modifier="longdivider" onclick="hisHeal()">ประวัติการรักษา</ons-list-item>
+    <ons-list-item modifier="longdivider" onclick="fav()">คุณหมอคนโปรด</ons-list-item>
+    <ons-list-item modifier="longdivider" onclick="addPayment()">ตั้งค่า</ons-list-item>
   </ons-list>
 
     <div style="font-size: 70%; font-weight: 500; margin-top: 3%; width: 100%; text-align: center;">
       <button
       style="background-color:rgb(5, 204, 121); color:rgb(255, 255, 255); font-weight: 500; border: none; border-radius: 25px; margin-top: 5%;"
-      type="button" class="btn btn-primary" id="next">PAYMENT</button>
+      type="button" class="btn btn-primary" id="next" onclick="payment()">PAYMENT</button>
     <br><br>
 
     <button type="button" id="signout" class="btn btn-primary" onclick="signout()">Sign Out</button>
