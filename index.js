@@ -1,5 +1,5 @@
 $(function () {
-
+console.log("dasdasdas");
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       //User is signed in.
@@ -17,14 +17,14 @@ $(function () {
     }
   });
 
-  $("#signout").click(function () {
-    firebase.auth().signOut()
-      .then(function () {
-        // Sign-out successful.
-      }).catch(function (error) {
-        // An error happened.
-      });
-
-  });
-
 })
+
+function signout() {
+      firebase.auth().signOut()
+        .then(function () {
+          // Sign-out successful.
+        }).catch(function (error) {
+          // An error happened.
+        });
+    
+}
